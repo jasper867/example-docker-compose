@@ -5,10 +5,4 @@ services:
       - "${PORT}:5000"
   redis:
     image: "redis:alpine"
-    volumes:
-      - redis-data:/data
     command: redis-server --appendonly yes
-
-volumes:
-  redis-data:
-    external: true 
